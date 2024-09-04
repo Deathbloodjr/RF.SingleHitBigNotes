@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GameDir>D:\Steam\steamapps\common\Taiko no Tatsujin Rhythm Festival_DEMO</GameDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>com.DB.RF.SingleHitBigNotes</AssemblyName>
+    <Description>A Rhythm Festival mod to hit big notes with one side of the drum.</Description>
+    <Version>0.0.1</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>SingleHitBigNotes</RootNamespace>
+    <PackageId>SingleHitBigNotes</PackageId>
+    <PackageVersion>0.0.1</PackageVersion>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.697" />
+    <Reference Include="$(GameDir)\BepInEx\interop\*.dll" Private="false" />
+    <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
+  </ItemGroup>
+
+  <Target Name="PostBuildCopy" AfterTargets="PostBuildEvent">
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(GameDir)\BepInEx\plugins\$(AssemblyName)" />
+  </Target>
+
+</Project>
