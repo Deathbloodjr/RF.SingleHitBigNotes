@@ -5,6 +5,8 @@ using BepInEx.Logging;
 using HarmonyLib;
 using BepInEx.Configuration;
 using SingleHitBigNotes.Plugins;
+using UnityEngine;
+using System.Collections;
 
 namespace SingleHitBigNotes
 {
@@ -49,13 +51,53 @@ namespace SingleHitBigNotes
 
             if (ConfigEnabled.Value)
             {
-                _harmony.PatchAll(typeof(SingleHitBigNotesPatch));
-                Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_NAME} is loaded!");
+                bool result = true;
+                result &= PatchFile(typeof(SingleHitBigNotesPatch));
+
+                if (result)
+                {
+                    Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_NAME} is loaded!");
+                }
+                else
+                {
+                    Log.LogError($"Plugin {MyPluginInfo.PLUGIN_GUID} failed to load.");
+                    // Unload this instance of Harmony
+                    // I hope this works the way I think it does
+                    _harmony.UnpatchSelf();
+                }
             }
             else
             {
                 Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_NAME} is disabled.");
             }
+        }
+
+        private bool PatchFile(Type type)
+        {
+            if (_harmony == null)
+            {
+                _harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
+            }
+            try
+            {
+                _harmony.PatchAll(type);
+#if DEBUG
+                Log.LogInfo("File patched: " + type.FullName);
+#endif
+                return true;
+            }
+            catch (Exception e)
+            {
+                Log.LogInfo("Failed to patch file: " + type.FullName);
+                Log.LogInfo(e.Message);
+                return false;
+            }
+        }
+
+        public static MonoBehaviour GetMonoBehaviour() => TaikoSingletonMonoBehaviour<CommonObjects>.Instance;
+        public void StartCoroutine(IEnumerator enumerator)
+        {
+            GetMonoBehaviour().StartCoroutine(enumerator);
         }
     }
 }
