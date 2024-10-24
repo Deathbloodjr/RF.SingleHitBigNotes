@@ -17,8 +17,8 @@ namespace SingleHitBigNotes.Plugins
         [HarmonyPrefix]
         public static bool EnsoInput_GetLastInputForCore_Prefix(EnsoInput __instance, ref TaikoCoreTypes.UserInputType __result, int player)
         {
-            //Plugin.Log.LogInfo("");
-            //Plugin.Log.LogInfo("EnsoInput_GetLastInputForCore_Prefix");
+            //Logger.Log("");
+            //Logger.Log("EnsoInput_GetLastInputForCore_Prefix");
 
             TaikoCoreTypes.UserInputType NewGetLastInputForCore()
             {

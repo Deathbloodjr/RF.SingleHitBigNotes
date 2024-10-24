@@ -11,7 +11,7 @@ namespace SingleHitBigNotes
     [BepInPlugin(MyPluginInfo.PLUGIN_GUID, ModName, MyPluginInfo.PLUGIN_VERSION)]
     public class Plugin : BasePlugin
     {
-        const string ModName = "SingleHitBigNotes";
+        public const string ModName = "SingleHitBigNotes";
 
         public static Plugin Instance;
         private Harmony _harmony;
