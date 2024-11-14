@@ -45,7 +45,8 @@ namespace SingleHitBigNotes.Plugins
             // I hope this works as intended
             // This is meant to prevent this mod from working in ranked matches, to avoid being considered cheating
             // Regular online matches are fine, since those are just for fun
-            if (__instance.ensoParam.networkGameMode != Scripts.EnsoGame.Network.NetworkGameMode.RankMatch)
+            if ((__instance.ensoParam.networkGameMode != Scripts.EnsoGame.Network.NetworkGameMode.RankMatch) &&
+                (__instance.ensoParam.networkGameMode != Scripts.EnsoGame.Network.NetworkGameMode.RoomMatchVs))
             {
                 __result = NewGetLastInputForCore();
                 return false;
