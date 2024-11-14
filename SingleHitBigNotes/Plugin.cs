@@ -19,9 +19,7 @@ namespace SingleHitBigNotes
         private Harmony _harmony;
         public new static ManualLogSource Log;
 
-
         public ConfigEntry<bool> ConfigEnabled;
-
 
 
         public override void Load()
