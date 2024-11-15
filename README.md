@@ -1,6 +1,6 @@
 # RF.SingleHitBigNotes
  A Rhythm Festival mod to hit big notes with one side of the drum.\
- This mod will be disabled in Online Ranked Matches to avoid being considered cheating. 
+ This mod will be disabled in Online Ranked Matches and Versus Online Rooms to avoid being considered cheating. 
  
 # Requirements
  Visual Studio 2022 or newer\
