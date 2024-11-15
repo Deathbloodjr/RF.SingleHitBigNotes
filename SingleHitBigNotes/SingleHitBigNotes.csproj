@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ModName>SingleHitBigNotes</ModName>
-    <ModVersion>0.0.1</ModVersion>
+    <ModVersion>1.0.0</ModVersion>
     <Description>A Rhythm Festival mod to hit big notes with one side of the drum.</Description>
   </PropertyGroup>
   
