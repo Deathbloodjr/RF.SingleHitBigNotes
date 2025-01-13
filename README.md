@@ -2,6 +2,8 @@
  A Rhythm Festival mod to hit big notes with one side of the drum.\
  This mod will be disabled in Online Ranked Matches and Versus Online Rooms to avoid being considered cheating. 
  
+ [![One-click Install using the Taiko Mod Manager](Resources/tmpInstallButton.png)](taikomodmanager:https://github.com/Deathbloodjr/RF.SingleHitBigNotes)
+ 
 # Requirements
  Visual Studio 2022 or newer\
  Taiko no Tatsujin: Rhythm Festival
