@@ -2,13 +2,15 @@
  A Rhythm Festival mod to hit big notes with one side of the drum.\
  This mod will be disabled in Online Ranked Matches and Versus Online Rooms to avoid being considered cheating. 
  
+ <a href="https://www.shorturl.at/DmAl1"> <img src="Resources/InstallButton.png" alt="One-click Install using the Taiko Mod Manager" width="256"/> </a>
+ 
 # Requirements
  Visual Studio 2022 or newer\
  Taiko no Tatsujin: Rhythm Festival
  
 
 # Build
- Install [BepInEx be 697](https://builds.bepinex.dev/projects/bepinex_be) or [BepInEx 6.0.0-pre.2](https://github.com/BepInEx/BepInEx/releases/tag/v6.0.0-pre.2) into your Rhythm Festival directory and launch the game.\
+ Install [BepInEx 6.0.0-pre.2](https://github.com/BepInEx/BepInEx/releases/tag/v6.0.0-pre.2) into your Rhythm Festival directory and launch the game.\
  This will generate all the dummy dlls in the interop folder that will be used as references.\
  Make sure you install the Unity.IL2CPP-win-x64 version.\
  Newer versions of BepInEx could have breaking API changes until the first stable v6 release, so those are not recommended at this time.
