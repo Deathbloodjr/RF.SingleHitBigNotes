@@ -2,7 +2,7 @@
  A Rhythm Festival mod to hit big notes with one side of the drum.\
  This mod will be disabled in Online Ranked Matches and Versus Online Rooms to avoid being considered cheating. 
  
- [![One-click Install using the Taiko Mod Manager](Resources/tmpInstallButton.png)](https://www.shorturl.at/DmAl1)
+ [![One-click Install using the Taiko Mod Manager](Resources/InstallButton.png)](https://www.shorturl.at/DmAl1)
  
 # Requirements
  Visual Studio 2022 or newer\
