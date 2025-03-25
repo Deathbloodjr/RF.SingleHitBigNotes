@@ -16,7 +16,10 @@
  Newer versions of BepInEx could have breaking API changes until the first stable v6 release, so those are not recommended at this time.
  
  Attempt to build the project, or copy the .csproj.user file from the Resources file to the same directory as the .csproj file.\
- Edit the .csproj.user file and place your Rhythm Festival file location in the "GameDir" variable.
+ Edit the .csproj.user file and place your Rhythm Festival file location in the "GameDir" variable.\
+ Download or build the [SaveProfileManager](https://github.com/Deathbloodjr/RF.SaveProfileManager) mod, and place that dll full path in SaveProfileManagerPath.
+
+Add BepInEx as a nuget package source (https://nuget.bepinex.dev/v3/index.json)
 
 
 
